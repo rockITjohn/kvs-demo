@@ -1,0 +1,16 @@
+{
+  "name": "kvs_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "rm function.zip && zip -r function.zip .",
+    "deploy": "aws lambda update-function-code --function-name jb-testing-listen-to-kvs --zip-file fileb://function.zip --profile 579890044654_AdministratorAccess --region us-east-1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1205.0"
+  }
+}

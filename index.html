@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HLS Streaming</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <h1>HLS Streaming Player</h1>
+  <video id="video"></video>
+  <p id="isHlsSupported"></p>
+  <script>
+    let video = document.getElementById('video');
+    let p = document.getElementById('isHlsSupported');
+    let endpoint = 'http://b-604520a7.kinesisvideo.us-east-1.amazonaws.com';
+    if(Hls.isSupported()) {
+      p.innerText = "HLS Supported";
+
+      let hls = new Hls();
+      hls.loadSource(endpoint);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        video.play();
+      });
+
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      p.innerText = "HLS Not Supported but can play vnd.apple.mpegurl";
+      video.src = endpoint;
+      video.addEventListener('loadmetadata', () => {
+        video.play();
+      })
+
+    } else {
+
+      p.innerText = "HLS and mpegurl Not Supported";
+    }
+  </script>
+</body>
+</html>
