@@ -1,2 +1,4 @@
-/node_modules
-/function.zip
+node_modules
+function.zip
+.DS_Store
+old-index.js

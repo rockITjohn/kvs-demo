@@ -1,0 +1,18 @@
+ UnsupportedStreamMediaTypeException: The type of the media is not supported or could not be determined from the media codec ids: (track 1: A_AAC), (track 2: A_AAC).
+    at Object.extractError (/var/task/node_modules/aws-sdk/lib/protocol/json.js:52:27)
+    at Request.extractError (/var/task/node_modules/aws-sdk/lib/protocol/rest_json.js:49:8)
+    at Request.callListeners (/var/task/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+    at Request.emit (/var/task/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+    at Request.emit (/var/task/node_modules/aws-sdk/lib/request.js:686:14)
+    at Request.transition (/var/task/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/var/task/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /var/task/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/var/task/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/var/task/node_modules/aws-sdk/lib/request.js:688:12) {
+  code: 'UnsupportedStreamMediaTypeException',
+  time: 2022-09-14T21:05:12.941Z,
+  requestId: 'e99deadf-fea4-4d4e-b989-c8b50f3733a3',
+  statusCode: 400,
+  retryable: false,
+  retryDelay: 69.54484089575388
+}

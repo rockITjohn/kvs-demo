@@ -1,0 +1,38 @@
+{
+  "Details": {
+    "ContactData": {
+      "Attributes": {},
+      "Channel": "VOICE",
+      "ContactId": "75c8dfee-e09c-49cc-a80c-5ae52bfb548b",
+      "CustomerEndpoint": {
+        "Address": "+19562440957",
+        "Type": "TELEPHONE_NUMBER"
+      },
+      "CustomerId": null,
+      "Description": null,
+      "InitialContactId": "75c8dfee-e09c-49cc-a80c-5ae52bfb548b",
+      "InitiationMethod": "INBOUND",
+      "InstanceARN": "arn:aws:connect:us-east-1:579890044654:instance/d604894d-373d-4165-a403-25e4e6fbd617",
+      "LanguageCode": "en-US",
+      "MediaStreams": {
+        "Customer": {
+          "Audio": {
+            "StartFragmentNumber": "91343852333181580945486776894001232476315058337",
+            "StartTimestamp": "1663189510697",
+            "StreamARN": "arn:aws:kinesisvideo:us-east-1:579890044654:stream/recordings-connect-rockitphone-contact-d4c17307-c7fb-46c3-9b05-1e4d5bdfac74/1661809616901"
+          }
+        }
+      },
+      "Name": null,
+      "PreviousContactId": "75c8dfee-e09c-49cc-a80c-5ae52bfb548b",
+      "Queue": null,
+      "References": {},
+      "SystemEndpoint": {
+        "Address": "+18664090169",
+        "Type": "TELEPHONE_NUMBER"
+      }
+    },
+    "Parameters": {}
+  },
+  "Name": "ContactFlowEvent"
+}
